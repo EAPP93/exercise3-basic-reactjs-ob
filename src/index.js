@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+//!importante estilos propios deben estar por debajo de los estilos de bootstrap
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
