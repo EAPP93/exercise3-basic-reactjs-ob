@@ -40,29 +40,29 @@ const Listcontact = () => {
     }
     
     return (
-        <div className='contenedor container-fluid gx-0'>
-            <header className='cabecera text-center'>
-                <h1>Hola mundo</h1>
+        <div className='contenedor container mx-auto p-0'>
+            <header className='cabecera text-center '>
+                <h1 className='col-12'>Hola mundo</h1>
             </header>
-            <main>
-                <section className='formulario'>
+            <main className='row-2'>
+                <section className='formulario col-12'>
                     <p className='text-center ' >Enter the data for create a contact</p>
                     <Formcontact className='form' add={addContact} ></Formcontact>
                 </section>
 
-                <section>
-                    <table className='table'>
-                        <thead className='d-none' style={{backgroundColor: 'green'}}>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Email Address</th>
-                                <th scope="col">Number Phone</th>
-                                <th scope="col">Connection Status</th>
+                <section className='col-12'>
+                    <table className='table row-2  m-0'>
+                        <thead className='d-none d-lg-grid row m-0' style={{backgroundColor: 'green'}}>
+                            <tr className='row '>
+                                <th className='col-1' scope="col">#</th>
+                                <th className='col-3' scope="col">Name</th>
+                                <th className='col-3' scope="col">Last Name</th>
+                                <th className='col-2' scope="col">Email Address</th>
+                                <th className='col-2' scope="col">Number Phone</th>
+                                <th className='col-1' scope="col">Connection Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='row m-0'>
                             {Contacts.length > 0 ?
                             Contacts.map( (contact ,i) => <Contactcomponent index ={i} contact ={contact} remove = {removeContact} refreshcConnectionStatus ={refresh}></Contactcomponent>) :
                             <h3 className='text-center mt-2'>Ingrese datos</h3>}

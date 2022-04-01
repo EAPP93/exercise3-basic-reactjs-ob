@@ -11,13 +11,13 @@ const Contactcomponent = ( {contact,remove,refreshcConnectionStatus,index} ) => 
     }
 
     return (
-        <tr>
-            <th scope="row">{index+1}</th>
-            <td >{contact.name}</td>
-            <td>{contact.lastName}</td>
-            <td>{contact.emailAddress}</td>
-            <td>{contact.numberPhone}</td>
-            <td>
+        <tr className='row text-center'>
+            <th className='col-1' scope="row">{index+1}</th>
+            <td className='col-3'>{contact.name}</td>
+            <td className='col-3'>{contact.lastName}</td>
+            <td className='col-2'>{contact.emailAddress}</td>
+            <td className='col-2'>{contact.numberPhone}</td>
+            <td className='col-1'>
                 {contactConnectionStatus()}
                 <i className='bi-trash task-action' style={{color: 'tomato'}} onClick={()=>remove(contact)}></i>
             </td>
