@@ -8,9 +8,7 @@ const Listcontact = () => {
 
     const defaultContact = new Contact('edwing','picado','empireeapp@gmail.com',685416916,false);
 
-
     const [Contacts, setContacts] = useState([defaultContact]);
-
 
     useEffect(() => {
         console.log('hay cambios en la lista de contactos',Contacts.length)
